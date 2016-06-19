@@ -28,6 +28,8 @@ class Utils:
         data[c] = self.update_tree(i,function,namespace)
         c += 1
     else:
+      print data
+      print namespace
       data = function(data,namespace)
     return(data)
 
