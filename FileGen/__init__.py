@@ -74,11 +74,10 @@ class Parameters:
         param_text = f.read()
       try:
         p = yaml.load(param_text)
-        print p
-        self.params = dict(params, **p)
+        self.params = dict(self.params, **p)
       except:
         p = json.loads(param_text)
-        self.params = dict(params, **p)
+        self.params = dict(self.params, **p)
 
 
   def resolve_tree(self,data,namespace):
