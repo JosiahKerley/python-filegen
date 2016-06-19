@@ -66,9 +66,9 @@ class Parameters:
 
 
   def resolve_tree(self,data,namespace):
-    data = str(data)
     print data
     print namespace
+    data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
     try:
       data = ast.literal_eval(data)
