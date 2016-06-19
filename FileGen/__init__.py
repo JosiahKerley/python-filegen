@@ -169,6 +169,8 @@ class Template:
 
 
   def resolveYAMLJinja(self,data,evals=25):
+    try: assert not data == None
+    except: raise Exception('Template.resolveYAMLJinja.data cannot be None')
     for i in range(0,evals):
       data = self.utils.update_tree(data,self.render_jinja)
     return(data)
