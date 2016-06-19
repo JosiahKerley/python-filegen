@@ -22,7 +22,7 @@ def test_generateTemplate():
   with open('test.yml','w') as f:
     f.write(yaml.dump(parameters))
   template = FileGen.Template(filepath='test.jn2')
-  params   = FileGen.Parameters(filepaths='test.yml')
+  params   = FileGen.Parameters(filepaths=['test.yml'])
   result   = template.render(params=params.params)
   print result
   os.remove('test.yml')
