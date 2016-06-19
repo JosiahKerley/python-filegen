@@ -63,6 +63,7 @@ class Parameters:
     except: raise Exception('Parameters.load.filepaths cannot be None')
     self.params = {}
     for i in filepaths:
+      print i
       try:
         assert os.path.isfile(i)
       except Exception as e:
