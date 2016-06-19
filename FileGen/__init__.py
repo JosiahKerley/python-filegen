@@ -74,6 +74,7 @@ class Parameters:
         param_text = f.read()
       try:
         p = yaml.load(param_text)
+        print p
         self.params = dict(params, **p)
       except:
         p = json.loads(param_text)
