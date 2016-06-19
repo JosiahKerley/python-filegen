@@ -106,8 +106,10 @@ class Parameters:
 
 
   def resolveYAMLJinja(self,data,evals=25):
-    assert not data == None
-    assert not evals == None
+    try: assert not data == None
+    except: raise Exception('Parameters.resolveYAMLJinja.data cannot be None')
+    try: assert not evals == None
+    except: raise Exception('Parameters.resolveYAMLJinja.evals cannot be None')
     for i in range(0,evals):
       data = self.utils.update_tree(data,self.resolve_tree)
     return(data)
