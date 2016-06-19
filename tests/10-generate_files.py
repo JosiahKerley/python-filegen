@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+
 def test_generateTemplate():
   parameters = {
     'list':[
