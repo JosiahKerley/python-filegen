@@ -144,7 +144,7 @@ class Template:
   def render(self,params):
     ## Render template
     params = self.resolveYAMLJinja(params)
-    render = jinja2.Environment().from_string(template_text).render(params)
+    render = jinja2.Environment().from_string(self.template_text).render(params)
     if self.debug:
       print('{}'.format(json.dumps(params,indent=2)))
     else:
