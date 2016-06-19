@@ -114,6 +114,9 @@ class Template:
 
 
   def __init__(self,filepath,ignore_cmd_err=False,debug=False):
+    assert not filepath == None
+    assert not ignore_cmd_err == None
+    assert not debug == None
     self.ignore_cmd_err = ignore_cmd_err
     self.debug          = debug
     self.load(filepath)
