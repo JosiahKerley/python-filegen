@@ -2,10 +2,10 @@ Hello World
 ===========
 Running:
 ```
-filegen -t hello.jn2 -p params.yml
+filegen -t template.jn2 -p *.yml
 ```
 
 Saving output to file:
 ```
-filegen -t hello.jn2 -p params.yml > hello.txt
+filegen -t template.jn2 -p *.yml > output.txt
 ```
