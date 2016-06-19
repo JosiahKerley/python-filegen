@@ -36,4 +36,4 @@ def test_generateTemplateConfirmOutput():
   assert generated == test_string
 
 
-print test_generateTemplate()
+print test_generateTemplateConfirmOutput()
