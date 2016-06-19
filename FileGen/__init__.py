@@ -114,7 +114,7 @@ class Template:
       self.template_text = f.read()
 
 
-  def render_jinja(data,namespace):
+  def render_jinja(self,data,namespace):
     data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
     try:
@@ -134,7 +134,7 @@ class Template:
     return(data)
 
 
-  def resolveYAMLJinja(data,evals=25):
+  def resolveYAMLJinja(self,data,evals=25):
     for i in range(0,evals):
       data = self.update_tree(data,self.render_jinja)
     return(data)
