@@ -15,6 +15,22 @@ class CommandFailed(Exception):
   pass
 
 
+class Utils:
+  def update_tree(self,data,function,namespace=None):
+    if namespace == None:
+      namespace = data
+    if type(data) == type({}):
+      for n in data:
+        data[n] = self.update_tree(data[n],function,namespace)
+    elif type(data) == type([]):
+      c = 0
+      for i in data:
+        data[c] = self.update_tree(i,function,namespace)
+        c += 1
+    else:
+      data = function(data,namespace)
+    return(data)
+
 ## Params
 class Parameters:
 
@@ -28,6 +44,7 @@ class Parameters:
     self.filepaths = filepaths
     self.debug = debug
     self.ignore_cmd_err = ignore_cmd_err
+    self.utils = Utils
 
 
   def load(self,filepaths):
