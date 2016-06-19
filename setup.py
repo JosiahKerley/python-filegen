@@ -9,7 +9,7 @@ setup(
   description      = 'Universal file generation toolbox',
   author           = 'Josiah Kerley',
   author_email     = 'josiah@kerley.io',
-  url              = 'http://josiah.kerley.io',
+  url              = 'http://josiahkerley.github.io/projects/2016/06/18/filegen.html',
   install_requires = requirements,
   packages         = [
     'FileGen'
