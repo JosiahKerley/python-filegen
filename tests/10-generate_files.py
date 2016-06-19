@@ -8,11 +8,9 @@ def test_generateTemplate():
       3
     ]
   }
-  template_text = '''
-This is a test.
+  template_text = '''This is a test.
 {% for l in list %}{{ l }}
-{% endfor %}
-  '''
+{% endfor %}'''
   import FileGen
   import yaml
   import os
