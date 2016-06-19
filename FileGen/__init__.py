@@ -72,6 +72,7 @@ class Parameters:
         print(e)
       with open(i,'r') as f:
         param_text = f.read()
+      print param_text
       try:
         p = yaml.load(param_text)
         self.params = dict(params, **p)
