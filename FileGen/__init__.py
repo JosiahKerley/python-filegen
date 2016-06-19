@@ -137,8 +137,10 @@ class Template:
 
 
   def render_jinja(self,data,namespace):
-    assert not data == None
-    assert not namespace == None
+    try: assert not data == None
+    except: raise Exception('Template.data cannot be None')
+    try: assert not namespace == None
+    except: raise Exception('Template.namespace cannot be None')
     data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
     try:
