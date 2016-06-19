@@ -36,5 +36,3 @@ def test_generateTemplateConfirmOutput():
 '''
   assert generated == test_string
   return(True)
-
-
