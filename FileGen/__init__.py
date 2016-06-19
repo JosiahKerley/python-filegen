@@ -82,8 +82,10 @@ class Parameters:
   def resolve_tree(self,data,namespace):
     print data
     print namespace
-    assert not data == None
-    assert not namespace == None
+    try: assert not data == None
+    except: raise Exception('Parameters.resolve_tree.data cannot be None')
+    try: assert not namespace == None
+    except: raise Exception('Parameters.resolve_tree.namespace cannot be None')
     data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
     try:
