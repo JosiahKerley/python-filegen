@@ -55,6 +55,7 @@ class Parameters:
 
 
   def load(self,filepaths):
+    assert not filepaths == None
     params = {}
     for i in filepaths:
       try:
