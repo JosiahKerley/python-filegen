@@ -17,6 +17,8 @@ class CommandFailed(Exception):
 
 class Utils:
   def update_tree(self,data,function,namespace=None):
+    assert not data == None
+    assert not function == None
     if namespace == None:
       namespace = data
     if type(data) == type({}):
