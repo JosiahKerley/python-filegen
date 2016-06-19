@@ -57,6 +57,7 @@ class Parameters:
     self.debug = debug
     self.ignore_cmd_err = ignore_cmd_err
     self.utils = Utils()
+    self.load(self.filepaths)
 
 
   def load(self,filepaths):
