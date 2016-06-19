@@ -35,6 +35,7 @@ def test_generateTemplateConfirmOutput():
 3
 '''
   assert generated == test_string
+  return(True)
 
 
 print test_generateTemplateConfirmOutput()
