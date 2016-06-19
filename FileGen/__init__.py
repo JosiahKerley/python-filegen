@@ -138,7 +138,7 @@ class Template:
 
   def resolveYAMLJinja(self,data,evals=25):
     for i in range(0,evals):
-      data = self.update_tree(data,self.render_jinja)
+      data = self.utils.update_tree(data,self.render_jinja)
     return(data)
 
 
