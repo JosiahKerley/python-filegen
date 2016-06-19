@@ -1,1 +1,3 @@
-I would like to say {{ text }}
+This is an example of using multiple params.
+From the global, I am getting {{ some_global_value }},
+and from the child I am getting {{ some_local_value }}.
