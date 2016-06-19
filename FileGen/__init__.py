@@ -135,6 +135,8 @@ class Template:
 
 
   def render_jinja(self,data,namespace):
+    assert not data == None
+    assert not namespace == None
     data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
     try:
