@@ -47,9 +47,12 @@ class Parameters:
 
 
   def __init__(self,filepaths,ignore_cmd_err=False,debug=False):
-    assert not filepaths == None
-    assert not ignore_cmd_err == None
-    assert not debug == None
+    try: assert not filepaths == None
+    except: raise Exception('Parameters.__init__.filepaths cannot be None')
+    try: assert not ignore_cmd_err == None
+    except: raise Exception('Parameters.__init__.ignore_cmd_err cannot be None')
+    try: assert not debug == None
+    except: raise Exception('Parameters.__init__.debug cannot be None')
     self.filepaths = filepaths
     self.debug = debug
     self.ignore_cmd_err = ignore_cmd_err
