@@ -28,7 +28,12 @@ def test_generateTemplate():
 
 
 def test_generateTemplateConfirmOutput():
-  test_generateTemplate()
+  generated = test_generateTemplate()
+  test_string = '''This is a test.
+1
+2
+3'''
+  assert generated == test_string
 
 
 print test_generateTemplate()
