@@ -124,6 +124,7 @@ class Template:
 
 
   def load(self,filepath):
+    assert not filepath == None
     try:
       assert os.path.isfile(filepath)
     except Exception as e:
