@@ -165,7 +165,7 @@ class Shell:
     self.results = parser.parse_args()
     template = Template(filepath=self.results.template_path,ignore_cmd_err=self.results.ignore_cmd_err)
     params   = Parameters(filepaths=self.results.param_paths,ignore_cmd_err=self.results.ignore_cmd_err)
-    print template(params=params)
+    print template.render(params=params)
 
 
 def shell_start():
