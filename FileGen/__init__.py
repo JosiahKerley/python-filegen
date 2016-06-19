@@ -177,7 +177,8 @@ class Template:
 
 
   def render(self,params):
-    ## Render template
+    try: assert not params == None
+    except: raise Exception('Template.render.params cannot be None')
     params = self.resolveYAMLJinja(params)
     render = jinja2.Environment().from_string(self.template_text).render(params)
     if self.debug:
