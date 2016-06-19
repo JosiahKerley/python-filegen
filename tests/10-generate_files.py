@@ -32,7 +32,8 @@ def test_generateTemplateConfirmOutput():
   test_string = '''This is a test.
 1
 2
-3'''
+3
+'''
   assert generated == test_string
 
 
