@@ -103,6 +103,7 @@ class Template:
     self.ignore_cmd_err = ignore_cmd_err
     self.debug          = debug
     self.load(filepath)
+    self.utils = Utils()
 
 
   def load(self,filepath):
