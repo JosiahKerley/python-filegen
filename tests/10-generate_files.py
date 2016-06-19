@@ -38,4 +38,3 @@ def test_generateTemplateConfirmOutput():
   return(True)
 
 
-print test_generateTemplateConfirmOutput()
