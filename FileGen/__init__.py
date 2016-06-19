@@ -163,8 +163,8 @@ class Shell:
     parser.add_argument('--ignore-command-error', '-i', action="store_true", dest="ignore_cmd_err", default=False, help='Allows the tool to ignore nonzero exit codes on <[metacommands]>')
     parser.add_argument('--version', action='version',  version='%(prog)s 1.0')
     self.results = parser.parse_args()
-    template = Template(filepath=results.template_path,ignore_cmd_err=results.ignore_cmd_err)
-    params   = Parameters(filepaths=results.param_paths,ignore_cmd_err=results.ignore_cmd_err)
+    template = Template(filepath=self.results.template_path,ignore_cmd_err=self.results.ignore_cmd_err)
+    params   = Parameters(filepaths=self.results.param_paths,ignore_cmd_err=self.results.ignore_cmd_err)
 
 
 
