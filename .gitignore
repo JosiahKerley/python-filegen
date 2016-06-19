@@ -13,6 +13,11 @@ translations/*.qm
 .AppleDouble
 .LSOverride
 .idea
+.pypirc
+FileGen.egg-info
+FileGenerator.egg-info
+build
+dist
 
 # Icon must end with two \r
 Icon
