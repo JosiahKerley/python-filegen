@@ -27,3 +27,6 @@ def test_generateTemplate():
   print result
   os.remove('test.yml')
   os.remove('test.jn2')
+
+
+test_generateTemplate()
