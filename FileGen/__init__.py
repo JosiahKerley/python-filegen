@@ -167,8 +167,7 @@ class Shell:
     params   = Parameters(filepaths=self.results.param_paths,ignore_cmd_err=self.results.ignore_cmd_err)
 
 
-
-if __name__ == "__main__":
+def shell_start():
   shell = Shell()
 
 
