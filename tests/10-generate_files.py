@@ -28,7 +28,7 @@ def test_generateTemplate():
 
 
 def test_generateTemplateConfirmOutput():
-  test_generateTemplate
+  test_generateTemplate()
 
 
 print test_generateTemplate()
