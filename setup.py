@@ -16,7 +16,7 @@ setup(
   ],
   entry_points     = {
     "console_scripts": [
-      "filegen = FileGen:main"
+      "filegen = FileGen:shell_start"
     ]
   },
 )
