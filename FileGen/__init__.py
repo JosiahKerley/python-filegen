@@ -65,23 +65,6 @@ class Parameters:
         self.params = dict(params, **p)
 
 
-  ## Resolve metaparams
-  def update_tree(self,data,function,namespace=None):
-    if namespace == None:
-      namespace = data
-    if type(data) == type({}):
-      for n in data:
-        data[n] = self.update_tree(data[n],function,namespace)
-    elif type(data) == type([]):
-      c = 0
-      for i in data:
-        data[c] = self.update_tree(i,function,namespace)
-        c += 1
-    else:
-      data = function(data,namespace)
-    return(data)
-
-
   def resolve_tree(self,data,namespace):
     data = str(data)
     data = jinja2.Environment().from_string(data).render(namespace)
@@ -104,7 +87,7 @@ class Parameters:
 
   def resolveYAMLJinja(self,data,evals=25):
     for i in range(0,evals):
-      data = self.update_tree(data,self.resolve_tree)
+      data = self.utils.update_tree(data,self.resolve_tree)
     return(data)
 
 
