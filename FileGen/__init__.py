@@ -98,6 +98,8 @@ class Parameters:
 
 
   def resolveYAMLJinja(self,data,evals=25):
+    assert not data == None
+    assert not evals == None
     for i in range(0,evals):
       data = self.utils.update_tree(data,self.resolve_tree)
     return(data)
