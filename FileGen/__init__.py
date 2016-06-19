@@ -21,7 +21,7 @@ class Parameters:
   filepaths      = None
   debug          = None
   ignore_cmd_err = None
-  data           = None
+  params         = None
 
 
   def __init__(self,filepaths,ignore_cmd_err=False,debug=False):
@@ -45,7 +45,7 @@ class Parameters:
         params = dict(params, **p)
       except:
         p = json.loads(param_text)
-        params = dict(params, **p)
+        self.params = dict(params, **p)
 
 
   ## Resolve metaparams
