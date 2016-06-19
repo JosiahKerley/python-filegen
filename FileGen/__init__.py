@@ -81,8 +81,7 @@ class Parameters:
 
 
   def resolve_tree(self,data,namespace):
-    print data
-    print namespace
+
     try: assert not data == None
     except: raise Exception('Parameters.resolve_tree.data cannot be None')
     try: assert not namespace == None
