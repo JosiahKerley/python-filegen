@@ -18,9 +18,9 @@ class CommandFailed(Exception):
 class Utils:
   def update_tree(self,data,function,namespace=None):
     try: assert not data == None
-    except: raise Exception('Utils.data cannot be None')
+    except: raise Exception('Utils.update_tree.data cannot be None')
     try: assert not function == None
-    except: raise Exception('Utils.function cannot be None')
+    except: raise Exception('Utils.update_tree.function cannot be None')
     if namespace == None:
       namespace = data
     if type(data) == type({}):
