@@ -18,9 +18,10 @@ class CommandFailed(Exception):
 ## Params
 class Parameters:
 
-  filepaths = None
-  debug = None
+  filepaths      = None
+  debug          = None
   ignore_cmd_err = None
+  data           = None
 
 
   def __init__(self,filepaths,ignore_cmd_err=False,debug=False):
