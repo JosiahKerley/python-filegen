@@ -16,6 +16,7 @@ def test_generateTemplate():
   '''
   import FileGen
   import yaml
+  import os
   with open('test.jn2','w') as f:
     f.write(template_text)
   with open('test.yml','w') as f:
@@ -24,3 +25,5 @@ def test_generateTemplate():
   params   = FileGen.Parameters(filepaths='test.yml')
   result   = template.render(params=params.params)
   print result
+  os.remove('test.yml')
+  os.remove('test.jn2')
