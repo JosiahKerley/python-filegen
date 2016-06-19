@@ -62,7 +62,7 @@ class Parameters:
   def load(self,filepaths):
     try: assert not filepaths == None
     except: raise Exception('Parameters.load.filepaths cannot be None')
-    params = {}
+    self.params = {}
     for i in filepaths:
       try:
         assert os.path.isfile(i)
